@@ -6,7 +6,7 @@
 
 
 # CI version to install (git tag/branch)
-TARGET_VERSION="v7.14.3"
+TARGET_VERSION="7-14-stable"
 
 # MySQL root password (will be used, not written)
 MYSQL_ROOT_PASSWORD="mysqlpass"
@@ -15,7 +15,7 @@ MYSQL_ROOT_PASSWORD="mysqlpass"
 MYSQL_GITLABCI_PASSWORD="gitlabcipass"
 
 # Gitlab address
-GITLAB_SERVER="http://127.0.0.1"
+GITLAB_SERVER="https://gitlab.sd.apple.com"
 
 # email
 GITLABCI_EMAIL="gitlab-ci@example.invalid"
@@ -99,7 +99,7 @@ EOF
 
 # install gitlab-ci
 cd $CIHOME
-$CISUDO git clone https://github.com/gitlabhq/gitlab-ci.git
+$CISUDO git clone https://github.com/phillipskevin/gitlab-ci.git
 cd gitlab-ci
 $CISUDO git checkout $TARGET_VERSION
 
